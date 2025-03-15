@@ -1,32 +1,51 @@
-/* Header Utama */
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Umum */
 .main-header, .secondary-header {
     width: 100%;
     text-align: center;
     color: white;
-    box-sizing: border-box;
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    min-height: 60px; /* Pastikan tinggi header sama */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Header Utama */
 .main-header {
     background: #0044cc;
-    padding: 15px;
-    font-size: 24px;
-    font-weight: bold;
 }
 
 /* Header Kedua (Informasi Tambahan) */
 .secondary-header {
     background: #0066ff;
-    padding: 15px; /* Disamakan dengan header utama */
-    font-size: 20px; /* Ukuran teks diperbesar agar lebih proporsional */
-    font-weight: normal;
+}
+
+/* Container */
+.container {
+    display: flex;
+    margin-top: 20px;
 }
 
 /* Sidebar Menu */
+aside {
+    width: 250px;
+    background: #0044cc;
+    padding: 10px;
+    color: white;
+}
+
 .menu {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 .menu li {
@@ -49,11 +68,11 @@
 .has-dropdown .submenu {
     display: none;
     list-style: none;
-    padding: 0;
     position: absolute;
     top: 100%;
     left: 0;
     background: #003399;
+    width: 100%;
 }
 
 .has-dropdown:hover .submenu {
@@ -68,4 +87,19 @@
 
 .submenu li a:hover {
     background: #002266;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #003399;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
 }
