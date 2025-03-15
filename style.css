@@ -1,53 +1,106 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Warna tema biru-putih-kuning */
+body {
+    background-color: #F5F5F5;
+    color: #1E3A8A;
+}
+
 /* Header */
 header {
-    background: linear-gradient(90deg, #0033a0, #0055ff);
+    background: linear-gradient(90deg, #FFD700, #1E3A8A);
     color: white;
     padding: 15px;
     text-align: center;
     position: relative;
 }
 
-/* Tombol Menu (Diperbaiki) */
-.menu-toggle {
-    background-color: #ffcc00;
-    color: #0033a0;
-    border: none;
-    padding: 10px 15px;
-    font-size: 18px;
-    cursor: pointer;
-    border-radius: 5px;
-    position: fixed; /* Tetap di layar */
-    top: 15px;
-    right: 15px;
-    z-index: 1001; /* Supaya tetap di atas menu */
+/* Efek Cahaya Berkilau */
+.glowing-text {
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFD700, 0 0 15px #FFD700;
 }
 
-.menu-toggle:hover {
-    background-color: #ffd700;
+/* Tombol Menu Toggle */
+.menu-toggle {
+    position: relative;
+    z-index: 1000;
+    background-color: #FFD700;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: 10px auto;
 }
 
 /* Menu Navigasi */
 .nav-menu {
-    display: none;
     position: absolute;
     top: 60px;
-    right: 15px;
-    background-color: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    background-color: #1E3A8A;
+    display: none;
+    text-align: center;
+    padding: 10px;
     border-radius: 5px;
-    overflow: hidden;
-    z-index: 1000; /* Di bawah tombol */
+    z-index: 999;
 }
 
 .nav-menu a {
-    display: block;
-    padding: 12px 20px;
-    color: #0033a0;
+    color: white;
     text-decoration: none;
-    border-bottom: 1px solid #ddd;
+    display: block;
+    padding: 10px;
+    transition: 0.3s;
 }
 
 .nav-menu a:hover {
-    background-color: #ffcc00;
+    background-color: #FFD700;
+    color: #000;
+}
+
+/* Konten */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.highlight {
+    color: #FFD700;
+    font-weight: bold;
+}
+
+/* Tombol Registrasi */
+.btn {
+    background-color: #FFD700;
     color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #E5C100;
+}
+
+/* Footer */
+footer {
+    background-color: #1E3A8A;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
 }
