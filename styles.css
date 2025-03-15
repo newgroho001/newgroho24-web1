@@ -7,14 +7,14 @@
 }
 
 body {
-    background-color: #111;
-    color: gold;
+    background-color: #f4f6ff;
+    color: #000;
     text-align: center;
 }
 
 /* Header */
 header {
-    background: #222;
+    background: #003366;
     padding: 15px;
     text-align: center;
     position: sticky;
@@ -23,13 +23,27 @@ header {
     z-index: 1000;
 }
 
-h1 {
-    font-size: 24px;
+/* Efek Glowing pada Judul */
+.glowing-text {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #FFD700, #FFFFFF, #FFD700);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 3s linear infinite;
+}
+
+@keyframes glow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Menu Toggle */
 .menu-toggle {
-    background: gold;
+    background: #FFD700;
     color: black;
     border: none;
     padding: 10px 15px;
@@ -40,7 +54,7 @@ h1 {
 
 .nav-menu {
     display: none;
-    background: #333;
+    background: #0044cc;
     padding: 10px;
     position: absolute;
     width: 100%;
@@ -49,14 +63,14 @@ h1 {
 
 .nav-menu a {
     display: block;
-    color: gold;
+    color: white;
     padding: 10px;
     text-decoration: none;
     font-size: 18px;
 }
 
 .nav-menu a:hover {
-    background: gold;
+    background: #FFD700;
     color: black;
 }
 
@@ -72,27 +86,34 @@ main {
 
 section {
     padding: 50px;
-    border-bottom: 1px solid gold;
+    border-bottom: 2px solid #FFD700;
+}
+
+.highlight {
+    color: #0044cc;
+    font-weight: bold;
 }
 
 /* Tombol */
 .btn {
-    background: gold;
+    background: #FFD700;
     color: black;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
     font-size: 18px;
     margin-top: 10px;
+    border-radius: 5px;
 }
 
 .btn:hover {
-    background: #ffd700;
+    background: #ffdd44;
 }
 
 /* Footer */
 footer {
-    background: #222;
+    background: #003366;
+    color: white;
     padding: 20px;
     text-align: center;
     margin-top: 20px;
