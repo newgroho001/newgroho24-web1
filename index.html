@@ -3,72 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Tampilan Awal</title>
+    <title>Website Jadi Aplikasi</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
     <script src="script.js" defer></script>
 </head>
 <body>
 
     <!-- HEADER -->
     <header>
-        <!-- Top Bar -->
-        <div class="top-bar">
-            <div class="social-icons">
-                <a href="#" aria-label="YouTube"><img src="youtube-icon.png" alt="Ikon YouTube"></a>
-                <a href="#" aria-label="Facebook"><img src="facebook-icon.png" alt="Ikon Facebook"></a>
-                <a href="#" aria-label="Instagram"><img src="instagram-icon.png" alt="Ikon Instagram"></a>
-            </div>
-            <div class="user-menu">
-                <a href="#">Login</a> | 
-                <a href="#">Webmail</a> | 
-                <a href="#">Member Area</a> 
-                <img src="indonesia-flag.png" alt="Bendera Indonesia" class="flag">
-            </div>
-        </div>
-
-        <!-- Logo & Menu Icon -->
-        <div class="logo-bar">
-            <div class="logo">
-                <h1>MIDTOU</h1>
-                <span>For Better Future</span>
-            </div>
-            <button class="menu-toggle" aria-label="Buka Menu">☰</button>
-        </div>
+        <h1>Website PWA</h1>
     </header>
 
-    <!-- NAVIGASI SIDEBAR -->
-    <nav class="sidebar">
-        <ul>
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li class="dropdown">
-                <a href="#">Product ▼</a>
-                <ul class="submenu">
-                    <li><a href="#">Forex</a></li>
-                    <li><a href="#">Commodities</a></li>
-                    <li><a href="#">Indices</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Insight</a></li>
-            <li><a href="#">Education</a></li>
-            <li><a href="#">Tools</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul>
-    </nav>
-
-    <!-- KONTEN UTAMA -->
+    <!-- KONTEN -->
     <main>
-        <section class="cta-section">
-            <button class="open-account">Open Account</button>
-        </section>
+        <h2>Selamat Datang!</h2>
+        <p>Ini adalah website yang bisa diinstal sebagai aplikasi.</p>
+        <button id="installBtn">Install Aplikasi</button>
     </main>
 
-    <!-- TOMBOL WHATSAPP -->
-    <div class="whatsapp-button">
-        <a href="https://wa.me/628123456789" target="_blank" rel="noopener noreferrer">
-            <img src="whatsapp-icon.png" alt="Chat via WhatsApp">
-        </a>
-    </div>
+    <!-- SERVICE WORKER -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+            .then(() => console.log("Service Worker terdaftar"))
+            .catch(error => console.log("SW Gagal: ", error));
+        }
+    </script>
 
 </body>
-    </html>
+</html>
