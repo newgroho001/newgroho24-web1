@@ -1,4 +1,4 @@
-/* Gaya Umum */
+/* Reset dasar */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -64,6 +64,7 @@ body {
     background: #003366;
     padding: 15px;
     transition: left 0.3s ease-in-out;
+    overflow-y: auto; /* Scroll jika menu panjang */
 }
 
 .sidebar.active {
@@ -78,11 +79,15 @@ body {
 .sidebar li {
     padding: 10px;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.sidebar li a {
+.sidebar a {
     text-decoration: none;
     color: white;
+    width: 100%;
 }
 
 .sidebar .active a {
@@ -90,7 +95,7 @@ body {
     color: #FFC107;
 }
 
-/* Dropdown */
+/* Dropdown Menu */
 .submenu {
     display: none;
     background: #002244;
@@ -101,7 +106,7 @@ body {
     display: block;
 }
 
-/* Open Account Button */
+/* Tombol Open Account */
 .open-account {
     text-align: center;
     margin: 20px;
@@ -115,7 +120,7 @@ body {
     cursor: pointer;
 }
 
-/* WhatsApp Floating Button */
+/* WhatsApp Button */
 .whatsapp-button {
     position: fixed;
     bottom: 20px;
