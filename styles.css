@@ -1,132 +1,148 @@
-/* Reset dasar */
-body {
-    font-family: Arial, sans-serif;
+/* Reset default margin dan padding */
+* {
     margin: 0;
     padding: 0;
-    background-color: #003366;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #002147;
     color: white;
+    padding: 10px 0;
 }
 
 /* Top Bar */
 .top-bar {
-    background: #FFC107;
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 14px;
 }
 
-.social-icons img {
-    width: 24px;
+.top-bar .social-icons img {
+    width: 20px;
     margin-right: 10px;
 }
 
-.menu {
+.top-bar .menu {
     display: flex;
     align-items: center;
 }
 
-.menu a {
-    color: black;
+.top-bar .menu a {
+    color: white;
     text-decoration: none;
-    margin-right: 10px;
+    margin: 0 10px;
 }
 
-.flag {
-    width: 24px;
-    height: 16px;
+.top-bar .menu .flag {
+    width: 25px;
+    margin-left: 10px;
 }
 
 /* Logo Bar */
 .logo-bar {
-    background: #002244;
-    padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 20px;
 }
 
 .logo h1 {
-    margin: 0;
+    font-size: 24px;
+}
+
+.logo span {
+    font-size: 14px;
+    display: block;
+    color: #ddd;
 }
 
 .menu-icon {
     font-size: 24px;
     cursor: pointer;
+    color: white;
 }
 
 /* Sidebar */
 .sidebar {
-    position: fixed;
-    left: -250px;
-    top: 0;
     width: 250px;
+    background-color: #002147;
+    position: fixed;
     height: 100vh;
-    background: #003366;
-    padding: 15px;
-    transition: left 0.3s ease-in-out;
-    overflow-y: auto; /* Scroll jika menu panjang */
-}
-
-.sidebar.active {
+    top: 0;
     left: 0;
+    padding-top: 70px;
 }
 
 .sidebar ul {
     list-style: none;
-    padding: 0;
 }
 
-.sidebar li {
-    padding: 10px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.sidebar ul li {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.sidebar a {
-    text-decoration: none;
+.sidebar ul li a {
     color: white;
-    width: 100%;
-}
-
-.sidebar .active a {
-    font-weight: bold;
-    color: #FFC107;
-}
-
-/* Dropdown Menu */
-.submenu {
-    display: none;
-    background: #002244;
-    padding-left: 20px;
-}
-
-.submenu.open {
+    text-decoration: none;
     display: block;
 }
 
-/* Tombol Open Account */
+.sidebar ul li.active {
+    background-color: #003366;
+}
+
+/* Dropdown Menu */
+.sidebar .dropdown .submenu {
+    display: none;
+    background-color: #003366;
+}
+
+.sidebar .dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    padding-left: 20px;
+}
+
+/* Open Account Button */
 .open-account {
     text-align: center;
     margin: 20px;
 }
 
 .open-account button {
-    background: #FFC107;
+    background-color: #ffcc00;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
 }
 
+.open-account button:hover {
+    background-color: #e6b800;
+}
+
 /* WhatsApp Button */
 .whatsapp-button {
     position: fixed;
     bottom: 20px;
-    left: 20px;
+    right: 20px;
 }
 
 .whatsapp-button img {
     width: 50px;
-}
+    cursor: pointer;
+                                  }
