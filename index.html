@@ -3,92 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEWGROHO24 PORTAL</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Website Tampilan Awal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-    <!-- Header Utama -->
-    <header class="main-header">
-        <h1>NEWGROHO24 PORTAL</h1>
+    <!-- Header -->
+    <header>
+        <div class="top-bar">
+            <div class="social-icons">
+                <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+            </div>
+            <div class="menu">
+                <a href="#">Login</a> | 
+                <a href="#">Webmail</a> | 
+                <a href="#">Member Area</a> 
+                <img src="indonesia-flag.png" alt="ID" class="flag">
+            </div>
+        </div>
+        <div class="logo-bar">
+            <div class="logo">
+                <h1>MIDTOU</h1>
+                <span>For Better Future</span>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        </div>
     </header>
 
-    <!-- Header Kedua (Informasi Tambahan) -->
-    <header class="secondary-header">
-        <p>Portal informasi dan edukasi bisnis, investasi, serta trading.</p>
-    </header>
+    <!-- Sidebar Menu -->
+    <nav class="sidebar" id="sidebar">
+        <ul>
+            <li class="active">HOME</li>
+            <li>ABOUT US</li>
+            <li>PRODUCT</li>
+            <li>INSIGHT</li>
+            <li>EDUCATION</li>
+            <li>TOOLS</li>
+            <li>CONTACT US</li>
+        </ul>
+    </nav>
 
-    <div class="container">
-        <aside>
-            <nav>
-                <ul class="menu">
-                    <li class="has-dropdown">
-                        <a href="#" onclick="showSlide('profil')">Profil ▼</a>
-                        <ul class="submenu">
-                            <li><a href="#" onclick="showSlide('visi_misi')">Visi & Misi</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-dropdown">
-                        <a href="#">Layanan ▼</a>
-                        <ul class="submenu">
-                            <li><a href="#" onclick="showSlide('investasi')">Investasi</a></li>
-                            <li><a href="#" onclick="showSlide('konsultasi')">Konsultasi</a></li>
-                            <li><a href="#" onclick="showSlide('pelatihan')">Pelatihan</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" onclick="showSlide('kontak')">Kontak</a></li>
-                </ul>
-            </nav>
-        </aside>
-
-        <main>
-            <div class="slide" id="home">
-                <h2>Apa Itu Trading Futures?</h2>
-                <p>Trading Futures adalah perdagangan kontrak berjangka yang memungkinkan trader membeli atau menjual suatu aset dengan harga yang telah ditentukan untuk dieksekusi di masa depan.</p>
-            </div>
-
-            <div class="slide" id="profil">
-                <h2>Profil NEWGROHO24 PORTAL</h2>
-                <p>NEWGROHO24 PORTAL adalah platform informasi dan edukasi seputar bisnis, investasi, dan trading.</p>
-            </div>
-
-            <div class="slide" id="visi_misi">
-                <h2>Visi & Misi</h2>
-                <p><strong>Visi:</strong> Menjadi portal terpercaya untuk edukasi bisnis dan investasi.</p>
-                <p><strong>Misi:</strong> Memberikan informasi yang akurat dan mendukung komunitas bisnis di Indonesia.</p>
-            </div>
-
-            <div class="slide" id="investasi">
-                <h2>Layanan Investasi</h2>
-                <p>Kami menyediakan berbagai layanan investasi yang dapat membantu meningkatkan aset Anda.</p>
-            </div>
-
-            <div class="slide" id="konsultasi">
-                <h2>Layanan Konsultasi</h2>
-                <p>Kami menawarkan konsultasi profesional untuk bisnis, investasi, dan trading.</p>
-            </div>
-
-            <div class="slide" id="pelatihan">
-                <h2>Layanan Pelatihan</h2>
-                <p>Kami menyediakan pelatihan lengkap tentang bisnis, investasi, dan trading.</p>
-            </div>
-
-            <div class="slide" id="kontak">
-                <h2>Kontak Kami</h2>
-                <p>Hubungi kami di WhatsApp/SMS/CALL: 085158988924</p>
-                <a href="https://wa.me/6285158988924?text=Halo%20admin,%20saya%20ingin%20bertanya%20tentang%20layanan%20di%20NEWGROHO24%20PORTAL." 
-                   class="wa-button" target="_blank">
-                   Hubungi via WhatsApp
-                </a>
-            </div>
-        </main>
+    <!-- Button -->
+    <div class="open-account">
+        <button>OPEN ACCOUNT</button>
     </div>
 
-    <footer>
-        <p>© 2025 NEWGROHO24 PORTAL. Semua Hak Dilindungi.</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <!-- WhatsApp Button -->
+    <div class="whatsapp-button">
+        <a href="#"><img src="whatsapp-icon.png" alt="WhatsApp"></a>
+    </div>
 
 </body>
-                </html>
+    </html>
