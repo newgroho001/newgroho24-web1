@@ -1,105 +1,96 @@
-/* Reset CSS */
-* {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-/* Header Umum */
-.main-header, .secondary-header {
-    width: 100%;
-    text-align: center;
+    background-color: #003366;
     color: white;
-    padding: 15px;
-    font-size: 24px;
-    font-weight: bold;
-    min-height: 60px; /* Pastikan tinggi header sama */
+}
+
+.top-bar {
+    background: #FFC107;
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Header Utama */
-.main-header {
-    background: #0044cc;
-}
-
-/* Header Kedua (Informasi Tambahan) */
-.secondary-header {
-    background: #0066ff;
-}
-
-/* Container */
-.container {
-    display: flex;
-    margin-top: 20px;
-}
-
-/* Sidebar Menu */
-aside {
-    width: 250px;
-    background: #0044cc;
+    justify-content: space-between;
     padding: 10px;
-    color: white;
+}
+
+.social-icons img {
+    width: 24px;
+    margin-right: 10px;
 }
 
 .menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.flag {
+    width: 24px;
+    height: 16px;
+}
+
+.logo-bar {
+    background: #002244;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    margin: 0;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.sidebar {
+    background: #003366;
+    width: 100%;
+    padding: 15px;
+}
+
+.sidebar ul {
     list-style: none;
     padding: 0;
 }
 
-.menu li {
-    position: relative;
-}
-
-.menu li a {
-    display: block;
+.sidebar li {
     padding: 10px;
-    text-decoration: none;
-    color: white;
-    background: #0044cc;
+    cursor: pointer;
 }
 
-.menu li a:hover {
-    background: #003399;
+.sidebar .active {
+    font-weight: bold;
+    color: #FFC107;
 }
 
-/* Dropdown */
-.has-dropdown .submenu {
-    display: none;
-    list-style: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #003399;
-    width: 100%;
-}
-
-.has-dropdown:hover .submenu {
-    display: block;
-}
-
-.submenu li a {
-    padding: 10px;
-    background: #003399;
-    display: block;
-}
-
-.submenu li a:hover {
-    background: #002266;
-}
-
-/* Main Content */
-main {
-    flex: 1;
-    padding: 20px;
-}
-
-/* Footer */
-footer {
+.open-account {
     text-align: center;
-    background: #003399;
-    color: white;
-    padding: 10px;
-    margin-top: 20px;
+    margin: 20px;
+}
+
+.open-account button {
+    background: #FFC107;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+.whatsapp-button img {
+    width: 50px;
 }
