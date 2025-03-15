@@ -1,24 +1,18 @@
-document.addEventListener("DOMContentLoaded", function () {
-    console.log("Script Loaded");
-
+// Toggle menu dengan klik tombol
+function toggleMenu() {
     let menu = document.querySelector(".nav-menu");
-    let menuToggle = document.querySelector(".menu-toggle");
+    let isVisible = menu.style.display === "block";
+    menu.style.display = isVisible ? "none" : "block";
+}
 
-    // Fungsi untuk toggle menu
-    function toggleMenu() {
-        menu.classList.toggle("active");
+// Tutup menu jika klik di luar
+document.addEventListener("click", function (event) {
+    let menu = document.querySelector(".nav-menu");
+    let toggleBtn = document.querySelector(".menu-toggle");
+
+    if (menu.style.display === "block" &&
+        !menu.contains(event.target) &&
+        !toggleBtn.contains(event.target)) {
+        menu.style.display = "none";
     }
-
-    // Klik tombol menu untuk menampilkan atau menyembunyikan
-    menuToggle.addEventListener("click", function (event) {
-        event.stopPropagation(); // Mencegah event bubbling agar tidak langsung tertutup
-        toggleMenu();
-    });
-
-    // Klik di luar menu untuk menutupnya
-    document.addEventListener("click", function (event) {
-        if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
-            menu.classList.remove("active");
-        }
-    });
 });
