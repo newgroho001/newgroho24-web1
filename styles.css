@@ -1,90 +1,123 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset dasar */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
     background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
 }
 
+/* Header */
 header {
-    background-color: #003366;
+    background: #007BFF;
     color: white;
-    text-align: center;
     padding: 15px;
+    text-align: center;
 }
 
+/* Container */
 .container {
     display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
 }
 
+/* Sidebar */
 aside {
     width: 250px;
-    background: #002244;
+    background: #0056b3;
     padding: 15px;
-    color: white;
+    border-radius: 5px;
 }
 
 .menu {
     list-style: none;
-    padding: 0;
 }
 
 .menu li {
-    margin: 10px 0;
+    margin-bottom: 10px;
 }
 
 .menu a {
-    color: white;
-    text-decoration: none;
     display: block;
-    padding: 8px;
-    background: #004488;
+    color: white;
+    padding: 10px;
+    background: #007BFF;
+    text-decoration: none;
     border-radius: 5px;
+    text-align: center;
+    transition: 0.3s;
 }
 
 .menu a:hover {
-    background: #0066cc;
+    background: #0056b3;
 }
 
-.submenu {
+/* Dropdown */
+.dropdown .submenu {
     list-style: none;
-    padding: 0;
-    margin-left: 10px;
     display: none;
-}
-
-.submenu li {
-    margin: 5px 0;
+    padding-left: 10px;
 }
 
 .dropdown:hover .submenu {
     display: block;
 }
 
+.submenu li {
+    margin-top: 5px;
+}
+
+.submenu a {
+    background: #00408B;
+}
+
+/* Main content */
 main {
     flex: 1;
     padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Slide tampilan */
 .slide {
     display: none;
-    animation: fadeIn 0.5s ease-in-out;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+.slide.active {
+    display: block;
 }
 
+/* Footer */
 footer {
     text-align: center;
-    padding: 10px;
-    background: #002244;
+    padding: 15px;
+    background: #007BFF;
     color: white;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+/* Tombol WhatsApp */
+.wa-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.wa-button:hover {
+    background-color: #1EBE5D;
 }
