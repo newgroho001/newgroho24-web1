@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Toggle Sidebar Menu
     let menuIcon = document.querySelector(".menu-icon");
     let sidebar = document.querySelector(".sidebar");
 
+    // Fungsi Toggle Sidebar
     menuIcon.addEventListener("click", function (event) {
-        event.stopPropagation(); // Mencegah klik dari menutup menu langsung
+        event.stopPropagation();
         sidebar.classList.toggle("active");
     });
 
@@ -20,11 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     dropdowns.forEach((dropdown) => {
         dropdown.addEventListener("click", function (event) {
-            event.stopPropagation(); // Mencegah klik dari menutup menu langsung
+            event.stopPropagation();
             let submenu = this.querySelector(".submenu");
-            if (submenu) {
-                submenu.classList.toggle("open");
-            }
+            submenu.classList.toggle("open");
         });
     });
 
