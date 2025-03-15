@@ -1,81 +1,65 @@
-/* Reset dasar */
-body, ul, li, a {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;
-}
-
-/* Styling umum */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-}
-
-.container {
-    display: flex;
-}
-
-/* Sidebar */
-aside {
-    width: 250px;
-    background: #2c3e50;
+/* Header Utama */
+.main-header {
+    background: #0044cc;
+    color: white;
+    text-align: center;
     padding: 15px;
+    font-size: 24px;
 }
 
-.menu > li {
+/* Header Kedua (Informasi Tambahan) */
+.secondary-header {
+    background: #0066ff;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Sidebar Menu */
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
     position: relative;
 }
 
-/* Styling menu utama */
-.menu > li > a {
+.menu li a {
     display: block;
-    color: white;
     padding: 10px;
-    background: #34495e;
-    border-radius: 5px;
-    margin-bottom: 5px;
+    text-decoration: none;
+    color: white;
+    background: #0044cc;
 }
 
-/* Hover menu utama */
-.menu > li > a:hover {
-    background: #1abc9c;
+.menu li a:hover {
+    background: #003399;
 }
 
-/* Submenu */
-.submenu {
+/* Dropdown */
+.has-dropdown .submenu {
     display: none;
+    list-style: none;
+    padding: 0;
     position: absolute;
-    left: 0;
     top: 100%;
-    background: #34495e;
-    width: 200px;
-    border-radius: 5px;
-    z-index: 100;
+    left: 0;
+    background: #003399;
 }
 
-/* Styling submenu */
-.submenu li a {
-    display: block;
-    padding: 10px;
-    color: white;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* Hover submenu */
-.submenu li a:hover {
-    background: #1abc9c;
-}
-
-/* Tampilkan submenu saat hover */
 .has-dropdown:hover .submenu {
     display: block;
 }
 
-/* Styling footer */
-footer {
-    text-align: center;
+.submenu li a {
     padding: 10px;
-    background: #2c3e50;
-    color: white;
+    background: #003399;
+    display: block;
+}
+
+.submenu li a:hover {
+    background: #002266;
 }
