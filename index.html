@@ -3,33 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Jadi Aplikasi</title>
+    <title>ACADEMY FOREX24</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="manifest" href="manifest.json">
     <script src="script.js" defer></script>
 </head>
 <body>
 
     <!-- HEADER -->
     <header>
-        <h1>Website PWA</h1>
+        <div class="logo">ACADEMY FOREX24</div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#registrasi">Registrasi</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+                <li><a href="#analisa">Portal Analisa</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- KONTEN -->
-    <main>
-        <h2>Selamat Datang!</h2>
-        <p>Ini adalah website yang bisa diinstal sebagai aplikasi.</p>
-        <button id="installBtn">Install Aplikasi</button>
-    </main>
+    <!-- BERANDA -->
+    <section id="beranda">
+        <h1>Selamat Datang di ACADEMY FOREX24</h1>
+        <p>Belajar dan Analisa Forex dengan Profesional</p>
+    </section>
 
-    <!-- SERVICE WORKER -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('service-worker.js')
-            .then(() => console.log("Service Worker terdaftar"))
-            .catch(error => console.log("SW Gagal: ", error));
-        }
-    </script>
+    <!-- REGISTRASI -->
+    <section id="registrasi">
+        <h2>Registrasi</h2>
+        <p>Daftar sekarang untuk mendapatkan akses premium.</p>
+        <button>Daftar Sekarang</button>
+    </section>
+
+    <!-- GALERI -->
+    <section id="galeri">
+        <h2>Galeri</h2>
+        <p>Kumpulan momen dan materi edukasi Forex.</p>
+    </section>
+
+    <!-- PORTAL ANALISA -->
+    <section id="analisa">
+        <h2>Portal Analisa</h2>
+        <p>Analisa harian dan strategi trading forex terbaik.</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 ACADEMY FOREX24 - Semua Hak Dilindungi</p>
+    </footer>
 
 </body>
 </html>
